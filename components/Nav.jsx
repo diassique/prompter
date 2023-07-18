@@ -34,8 +34,6 @@ function Nav() {
          <p className="logo_text">Prompter</p>
       </Link>
 
-      {alert(providers)}
-
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         {session?.user ? (
@@ -52,7 +50,7 @@ function Nav() {
 
             <Link href="/profile">
               <Image 
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -80,12 +78,12 @@ function Nav() {
 
       {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
-        { session?.user ? (
+        {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               width={37}
-              height={37}
+               height={37}
               className="rounded-full"
               alt="profile"
               onClick={() => setToggleDropdown(!toggleDropdown)}

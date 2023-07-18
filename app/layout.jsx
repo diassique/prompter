@@ -1,4 +1,5 @@
 import React from "react";
+
 import '@styles/globals.css';
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
@@ -27,4 +28,4 @@ const RootLayout = ({ children }) => {
   )
 }
 
-export default RootLayout
+export default RootLayout;
